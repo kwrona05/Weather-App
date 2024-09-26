@@ -12,14 +12,17 @@ function SearchBar({ onCityChange }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="search-form">
       <input
         type="text"
         placeholder="Enter your city"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
+        className="search-input"
       />
-      <button type="submit">Show weather</button>
+      <button type="submit" className="search-button">
+        Show weather
+      </button>
     </form>
   );
 }

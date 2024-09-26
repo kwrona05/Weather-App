@@ -43,10 +43,10 @@ function WeatherApp() {
 
   return (
     <div className="container">
-      <h1>Weather App</h1>
+      <h1 className="app-title">Weather App</h1>
       <SearchBar onCityChange={handleCityChange} />
-      {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
+      {loading && <p className="loading">Loading...</p>}
+      {error && <p className="error">{error}</p>}
       {weather && <WeatherDisplay weather={weather} />}
     </div>
   );
